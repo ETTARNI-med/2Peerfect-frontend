@@ -1,0 +1,21 @@
+<svg width="120" height="80" viewBox="0 0 139 116" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Ellipse 15" filter="url(#filter0_d_223_155)">
+<path d="M128 54C128 78.7537 103.134 101 69.5 101C35.8663 101 11 78.7537 11 54C11 29.2463 35.8663 7 69.5 7C103.134 7 128 29.2463 128 54Z" stroke="url(#paint0_linear_223_155)" stroke-width="14" shape-rendering="crispEdges"/>
+</g>
+<defs>
+<filter id="filter0_d_223_155" x="0" y="0" width="139" height="116" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_223_155"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_223_155" result="shape"/>
+</filter>
+<linearGradient id="paint0_linear_223_155" x1="69.5" y1="0" x2="69.5" y2="108" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="1"/>
+</linearGradient>
+</defs>
+</svg>
