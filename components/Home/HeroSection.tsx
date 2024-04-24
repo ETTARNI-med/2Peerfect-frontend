@@ -3,6 +3,8 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import JeVeuxButton from "@/components/Home/JeVeuxButton";
 import mainPic from "../../public/mainPic.svg";
+import rightChat from "../../public/right-robot.png";
+import leftChat from "../../public/left-robot.png";
 
 export default function Home() {
   const courses = ['génie civil', 'anglais', ' UI/UX DESIGN'];
@@ -38,7 +40,37 @@ export default function Home() {
         <div className="absolute top-2/3 z-40 inset-0 flex  justify-center">
           <JeVeuxButton />
         </div>
+        <div className="absolute bottom-0 left-0 p-2">
+          {/* Left bottom icon */}
+          <button className="rounded-full  text-white p-2">
+          <Image
+          className=" z-30 "
+          src={leftChat}
+          alt="background"
+          style={{
+            width: "100%",
+            height: "auto",
+          }}
+         
+        />
+          </button>
+        </div>
 
+        <div className="absolute bottom-0 right-0 p-2">
+          {/* Right bottom icon */}
+          <button className="rounded-full  text-white p-2">
+          <Image
+          className=" z-30 "
+          src={rightChat}
+          alt="background"
+          style={{
+            width: "100%",
+            height: "auto",
+          }}
+          
+        />
+          </button>
+        </div>
         <div className="absolute right-1/3 -bottom-24 font-extrabold -z-10 w-[111px] h-[111px] rounded-full shadow border-8 border-black" />
 
         <div className=" absolute -left-12 -z-10 -bottom-[20px] w-[111px] h-[111px] rounded-full shadow border-8 border-blue-800" />
