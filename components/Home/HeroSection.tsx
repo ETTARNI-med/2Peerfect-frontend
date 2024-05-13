@@ -1,16 +1,15 @@
-'use client'
+"use client";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import JeVeuxButton from "@/components/Home/JeVeuxButton";
-import ChatbotPopup from "../chatbot/ChatbotPopup";
 import mainPic from "../../public/mainPic.svg";
 import rightChat from "../../public/right-robot.png";
 import leftChat from "../../public/left-robot.png";
+import TriggreChat from "./../chatbot/TriggreChat";
 
 export default function Home() {
-  const courses = ['génie civil', 'anglais', ' UI/UX DESIGN'];
+  const courses = ["génie civil", "anglais", " UI/UX DESIGN"];
   const [element, setElement] = useState(0);
-  const [showChatbot, setShowChatbot] = useState(false); // State to manage chatbot visibility
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -19,14 +18,6 @@ export default function Home() {
 
     return () => clearInterval(interval);
   }, []); // Empty dependency array to run useEffect only once on mount
-
-  const openChatbot = () => {
-    setShowChatbot(true);
-  };
-
-  const closeChatbot = () => {
-    setShowChatbot(false);
-  };
 
   const [isChatbotOpen, setIsChatbotOpen] = useState(false);
 
@@ -46,47 +37,49 @@ export default function Home() {
           }}
           objectFit="cover"
         />
-        <div className=" absolute flex justify-center w-full   z-40 top-1/3">
+        <div className=" absolute flex justify-center w-full top-1/3">
           <span className="text-white text-[70px] font-bold w-[1122px] h-[270px] leading-[85.08px]">
             Libérez votre apprentissage <br />
-            avec 2peerfect en {<span className="uppercase text-lime-400">{courses[element]}</span>}
+            avec 2peerfect en{" "}
+            {
+              <span className="uppercase text-lime-400">
+                {courses[element]}
+              </span>
+            }
           </span>
         </div>
-        <div className="absolute top-2/3 z-40 inset-0 flex  justify-center">
+        <div className="absolute top-2/3  inset-0 flex  justify-center cursor-pointer">
           <JeVeuxButton />
         </div>
-        <div className="absolute bottom-0 left-0 p-2 cursor-pointer">
+        <div
+          onClick={toggleChatbot}
+          className="absolute bottom-0 left-0 p-2 cursor-pointer"
+        >
           {/* Left bottom icon */}
-          <button className="rounded-full  text-white p-2">
           <Image
-          className=" z-30 "
-          src={leftChat}
-          alt="background"
-          style={{
-            width: "100%",
-            height: "auto",
-          }}
-         
-        />
-          </button>
-           {/* Render ChatbotPopup */}
-          {isChatbotOpen && <ChatbotPopup onClose={toggleChatbot} />}
+            className="z-30"
+            src={leftChat}
+            alt="background"
+            style={{
+              width: "100%",
+              height: "auto",
+            }}
+          />
+          {/* Render Chatbot*/}
+          {isChatbotOpen && <TriggreChat onClose={toggleChatbot} />}
         </div>
 
-        <div className="absolute bottom-0 right-0 p-2 cursor-pointer" >
+        <div className="absolute bottom-0 right-0 p-2 cursor-pointer">
           {/* Right bottom icon */}
-          <button className="rounded-full  text-white p-2" onClick={openChatbot}>
-          <Image
-          className=" z-30 "
-          src={rightChat}
-          alt="background"
-          style={{
-            width: "100%",
-            height: "auto",
-          }}
-          
-        />
-          </button>
+            <Image
+              className=" z-30 "
+              src={rightChat}
+              alt="background"
+              style={{
+                width: "100%",
+                height: "auto",
+              }}
+            />
         </div>
         <div className="absolute right-1/3 -bottom-36 font-extrabold -z-10 w-[111px] h-[111px] rounded-full shadow border-8 border-black" />
 
