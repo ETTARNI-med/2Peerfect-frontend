@@ -21,8 +21,10 @@ export default function Home() {
 
   const [isChatbotOpen, setIsChatbotOpen] = useState(false);
 
+  // Modified toggleChatbot function to close the chatbot only when a button is clicked
   const toggleChatbot = () => {
-    setIsChatbotOpen(!isChatbotOpen);
+ 
+    setIsChatbotOpen(!isChatbotOpen); // Toggle chatbot visibility
   };
   return (
     <>
@@ -52,8 +54,8 @@ export default function Home() {
           <JeVeuxButton />
         </div>
         <div
-          onClick={toggleChatbot}
-          className="absolute bottom-0 left-0 p-2 cursor-pointer"
+           onClick={() => setIsChatbotOpen(!isChatbotOpen)} // Toggle chatbot visibility when clicked
+           className="absolute bottom-0 left-0 p-2 cursor-pointer"
         >
           {/* Left bottom icon */}
           <Image
@@ -66,7 +68,7 @@ export default function Home() {
             }}
           />
           {/* Render Chatbot*/}
-          {isChatbotOpen && <TriggreChat onClose={toggleChatbot} />}
+          {isChatbotOpen && <TriggreChat onClose={() => setIsChatbotOpen(false)} />} {/* Pass function to close the chatbot */}
         </div>
 
         <div className="absolute bottom-0 right-0 p-2 cursor-pointer">
