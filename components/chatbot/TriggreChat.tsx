@@ -1,5 +1,5 @@
 import React from "react";
-import ChatBot from "./ChatbotPopup";
+import ChatBot from "./Chatbot";
 
 interface TriggreChatProps {
   onClose: () => void;
