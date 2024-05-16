@@ -1,99 +1,80 @@
-import { FunctionComponent } from "react";
-import { useState } from "react";
+import { FunctionComponent, useState } from "react";
 import logo from "../../public/left-robot.png";
 import Arrow from "../../public/Arrow.png";
 import Download from "../../public/Download.png";
 import x from "../../public/x.png";
 
-interface ChatbotProps {   onClose: () => void; }
+interface ChatbotProps {
+  onClose: () => void;
+}
 
-const Chatbot: React.FC<ChatbotProps> = ({ onClose }) => {
-  // State to manage chatbot visibility
+const Chatbot: FunctionComponent<ChatbotProps> = ({ onClose }) => {
   const [isOpen, setIsOpen] = useState(true);
 
-  // Function to handle closing the chat
   const handleCloseChat = (): void => {
-    setIsOpen(false); // Close the chat
-    onClose(); // Call the onClose function passed from the parent
+    setIsOpen(false);
+    onClose();
   };
 
   return isOpen ? (
     <div className="relative w-[600px] h-[500px] text-left text-black font-inter">
-      <div className="absolute top-0 right-0 bottom-0 left-[2px] w-[298px] h-full">
-      <div onClick={handleCloseChat}>
-        <img
-          className="absolute top-[15px] right-[15px] bottom-[175px] left-[265px] h-[10px] w-[20px] max-w-full max-h-full overflow-hidden"
-          alt=""
-          src={x.src}
-        />
-        </div>
-        <div className="absolute top-[20px] right-0 bottom-[2px] left-[2px] h-[178px] w-[296px] rounded-[10px] bg-white" />
-        <div className="absolute top-[50px] right-[30px] bottom-[120px] left-[40px] h-[30px] w-[200px]">
-          <div className="absolute top-0 right-0 bottom-0 left-0 h-full w-full rounded-[5px] bg-[#eee]" />
-          <p className="absolute top-[5px] left-[10px] w-[180px] font-normal inline-block text-[12px]">
-            <span>Je suis Monsieur MouWajih, prêt à vous </span>
-            <br />
-            <span>aider à tranformer vos pdf en exercices.</span>
-          </p>
-        </div>
-        <div className="absolute top-[100px] right-[30px] bottom-[80px] left-[40px] h-[20px] w-[200px]">
-          <div className="absolute top-0 right-0 bottom-0 left-0 h-full w-full rounded-[5px] bg-[#eee]" />
-          <p className="absolute top-[2px] left-[30px] h-[16px] w-[140px] font-normal inline-block text-[12px]">
-            Importer votre PDF
-          </p>
-        </div>
-        <p className="absolute top-[120px] left-[50px] text-[10px] font-normal text-[#89898a]">
-          6:23 AM
-        </p>
-        {/* <div className="absolute top-[10px] right-[10px] bottom-[170px] left-[2px] h-[20px] w-[286px] rounded-[10px] bg-[#f0f0f0]" /> */}
-      
-        <img
-          className="absolute top-[5px] right-[140px] bottom-[180px] left-[130px] h-[15px] w-[30px] max-w-full max-h-full overflow-hidden"
-          alt=""
-          src={logo.src}
-        />
-        <img
-          className="absolute top-[45px] right-[265px] bottom-[145px] left-[15px] h-[10px] w-[15px] max-w-full max-h-full overflow-hidden"
-          alt=""
-          src={logo.src}
-        />
-        <p className="absolute top-[20px] left-[60px] text-[16px] font-medium bg-[#A7E92F]">
-          Monsieur Flash Card
-        </p>
-        <img
-          className="absolute top-[105px] right-[120px] bottom-[85px] left-[160px] h-[10px] w-[15px] pl-4 max-w-full max-h-full overflow-hidden"
-          alt=""
-          src={Download.src}
-        />
-        <div className="absolute top-8 right-20 bottom-170 left-[260px] h-16 w-auto rounded-[5px] overflow-hidden bg-[#A7E92F]" />
-        <div className="absolute top-[180px] right-0 bottom-0 left-[2px] h-[20px] w-[296px] text-[12px]">
-          <div className="absolute top-0 right-0 bottom-0 left-0 h-full w-full rounded-[0px_0px_10px_10px] bg-[#a7e92f]"
-           />
-          <img
-            className="absolute top-[5px] right-[15px] bottom-[5px] left-[270px] h-[10px] w-[15px] max-w-full max-h-full overflow-hidden"
-            alt=""
-            src={Arrow.src}
-          />
-          <div className="absolute top-[3px] right-[100px] bottom-[3px] left-[30px] h-[14px] w-[170px]">
+      <div className="absolute w-96 inset-0 flex flex-col bg-white rounded-2xl shadow-lg">
+        <div className="relative h-18 w-full flex  items-center justify-center rounded-2xl bg-[#A7E92F] mb-4">
+          <div className="flex flex-col items-center">
+            <img className="h-12 w-12 " alt="" src={logo.src} />
+            <p className="text-base font-semibold  px-2 py-1 rounded">
+              Monsieur Flash Card
+            </p>
+            {/* <div className="flex items-center justify-between"></div> */}
+          </div>
+          <div className=" flex absolute top-0 right-0 h-8 w-8 pt-2">
             <img
-              className="absolute top-[3px] right-[45px] bottom-[3px] left-[125px] h-[8px] w-[15px] max-w-full max-h-full overflow-hidden"
+              className="h-6 w-6 justify-items-end cursor-pointer"
               alt=""
-              src={Download.src}
+              src={x.src}
+              onClick={handleCloseChat}
             />
-            <div className="absolute top-0 right-0 bottom-0 left-0 h-full w-full rounded-[4px] bg-white" />
-            <label
-              htmlFor="pdf-upload"
-              className="absolute top-0 right-0 bottom-0 left-0 h-full w-full rounded-[4px] bg-white flex flex-col justify-center items-center"
-            >
-              <input id="pdf-upload" type="file" className="hidden" />
-              <p className="text-[12px]">Insérer le PDF</p>
-            </label>
           </div>
         </div>
-       
+        <div className="h-96 relative flex flex-col ">
+          <div className="flex absolute top-0 left-0 space-x-4">
+            <img className="h-12 w-auto" alt="" src={logo.src} />
+          </div>
+          <div className="flex items-center justify-center mr-8 mt-8 ml-8  bg-gray-300 p-2 rounded-xl ">
+            <p className="text-xs text-black ">
+              Je suis Monsieur MouWajih, prêt à vous aider à tranformer vos pdf
+              en exercices.
+            </p>
+          </div>
+          <div className="flex flex-col ">
+            <div className="flex w-44 bg-gray-300 p-2  rounded-xl mr-10 mt-8 ml-2 ">
+              <p className="flex space-x-4 text-xs font-medium text-black ">
+                Importer votre PDF
+                <img className="h-4 w-auto pl-2" alt="" src={Download.src} />
+              </p>
+            </div>
+            <div className="justify-start ml-6 mt-1">
+              <p className="text-xs text-gray-500">6:23 AM</p>
+            </div>
+          </div>
+        </div>
+        <div className="relative flex h-14 flex-row items-center justify-center bg-[#A7E92F] rounded-b-xl">
+          <div className="flex items-center w-32 justify-center bg-slate-50 p-1 rounded-xl">
+            <label
+              htmlFor="pdf-upload"
+              className="text-base font-medium text-black cursor-pointer "
+            >
+              Insérer le PDF
+              <input id="pdf-upload" type="file" className="hidden" />
+            </label>
+          </div>
+          <div className="pl-3 absolute right-4">
+            <img src={Arrow.src} alt="" />
+          </div>
+        </div>
       </div>
     </div>
-  ): null;
+  ) : null;
 };
 
 export default Chatbot;
