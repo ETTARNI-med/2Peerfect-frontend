@@ -16,9 +16,8 @@ const Chatbot: FunctionComponent<ChatbotProps> = ({ onClose }) => {
   const handleCloseChat = (): void => {
     setIsOpen(false);
     setIsPopupOpen(false);
-    onClose();
+    // onClose();
   };
-
 
   return isOpen ? (
     <div className="relative w-[600px] h-[500px] text-left text-black font-inter">
@@ -75,14 +74,15 @@ const Chatbot: FunctionComponent<ChatbotProps> = ({ onClose }) => {
               <input id="pdf-upload" type="file" className="hidden" />
             </label>
           </div>
-          <div className="pl-3 absolute right-4" onClick={() => setIsPopupOpen(true)}>
+          <div
+            className="pl-3 absolute right-4"
+            onClick={() => setIsPopupOpen(true)}
+          >
             <img src={Arrow.src} alt="" />
           </div>
         </div>
         {/* Render ChatbotPopup conditionally */}
-      {isPopupOpen && (
-        <ChatbotPopup onClose={handleCloseChat} />
-      )}
+        {isPopupOpen && <ChatbotPopup onClose={handleCloseChat} />}
       </div>
     </div>
   ) : null;

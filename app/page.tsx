@@ -17,9 +17,7 @@ import Events from "@/components/Home/Events";
 export default function Home() {
   return (
     <>
-      <div>
-        <HeroSection />
-      </div>
+      <HeroSection />
       <div className="relative flex justify-between pl-16">
         <DesignCard />
         <PresentielCard />
@@ -32,10 +30,10 @@ export default function Home() {
         <WebCard />
         <FormationEnlign />
       </div>
-      <Partners/>
-      <CoursPopulaire/>
-      <JeSuisUnCentre/>
-      <Events/>
+      <Partners />
+      <CoursPopulaire />
+      <JeSuisUnCentre />
+      <Events />
     </>
   );
 }

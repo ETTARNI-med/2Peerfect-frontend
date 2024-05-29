@@ -47,7 +47,7 @@ export default function CoursPopulaire() {
       <div className="w-[170px] h-[42px] bg-white bg-opacity-90  rounded-[50px] shadow text-blue-800 text-2xl font-medium px-7 py-1 ml-4">
       <Link href={`/${info.name}`}>  {info.name}</Link>
       </div>
-      <div className="w-[296px] h-[140px] bg-blue-800 rounded-tr-[40px] rounded-bl-[40px] mt-4 ml-8">
+      <div className="w-[296px] h-[140px]  rounded-tr-[40px] rounded-bl-[40px] mt-4 ml-8">
         <Image
           className="rounded-[19px]"
           src={info.image_src}
