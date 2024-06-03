@@ -12,16 +12,7 @@ export default function Navbar() {
   const handleClick = () => {
     setIsVisible(false);
   };
-  useEffect(() => {
-    // Add event listener when component mounts
-    document.body.style.overflow = isVisible ? "hidden" : "auto";
-
-    // Cleanup: remove event listener when component unmounts
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [isVisible]);
-
+ 
   return (
     <div className="flex justify-between  h-0  w-full z-50 ">
       {isVisible ? (
