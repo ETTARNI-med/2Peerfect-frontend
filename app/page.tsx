@@ -18,7 +18,7 @@ import SignIn from '@/components/SignIn'
 export default function Home() {
     return (
         <>
-            <div className="w-full h-full fixed z-50 backdrop-blur-xl flex justify-center">
+            <div className="w-full h-full fixed z-50 backdrop-blur-xl flex justify-center items-center">
                 <SignIn />{' '}
             </div>
             <div>
