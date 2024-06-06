@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import background from '../public/background.png'
 
@@ -14,13 +15,24 @@ import CoursPopulaire from '@/components/Home/CoursPopulaire'
 import JeSuisUnCentre from '@/components/Home/JeSuisUnCentre'
 import Events from '@/components/Home/Events'
 import SignIn from '@/components/SignIn'
+import SignUp from '@/components/SignUp'
 
 export default function Home() {
+    const [singIn, setSignIn] = useState<boolean>(false)
+    const [signUp, setSignUp] = useState<boolean>(true)
+
     return (
         <>
-            <div className="w-full h-full fixed z-50 backdrop-blur-xl flex justify-center items-center">
-                <SignIn />{' '}
-            </div>
+            {singIn && (
+                <div className="w-full h-full fixed z-50 backdrop-blur-xl flex justify-center items-center">
+                    <SignIn />{' '}
+                </div>
+            )}
+            {signUp && (
+                <div className="w-full h-full fixed z-50 backdrop-blur-xl flex justify-center items-center">
+                    <SignUp />{' '}
+                </div>
+            )}
             <div>
                 <HeroSection />
             </div>
