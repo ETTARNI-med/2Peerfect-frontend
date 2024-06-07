@@ -11,7 +11,7 @@ const SignIn = () => {
         flex justify-center flex-col"
         >
             <h1 className="text-blue-700 font-bold text-4xl text-center mt-16 ">
-                Login to Your Account
+                Bienvenue
             </h1>
             <form
                 onSubmit={(e) => {

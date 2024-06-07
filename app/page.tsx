@@ -18,8 +18,8 @@ import SignIn from '@/components/register/SignIn'
 import SignUp from '@/components/register/SignUp'
 
 export default function Home() {
-    const [singIn, setSignIn] = useState<boolean>(false)
-    const [signUp, setSignUp] = useState<boolean>(true)
+    const [singIn, setSignIn] = useState<boolean>(true)
+    const [signUp, setSignUp] = useState<boolean>(false)
 
     return (
         <>
