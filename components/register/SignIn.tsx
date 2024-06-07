@@ -43,7 +43,7 @@ const SignIn = () => {
                     className="px-8 py-4 mt-8 bg-lime-400 rounded-xl text-blue-700 font-semibold 
                 hover:scale-110 transform transition-transform ease-in-out duration-300 hover:shadow-xl "
                 >
-                    Sign in
+                    Se connecter
                 </button>
             </form>
         </div>
