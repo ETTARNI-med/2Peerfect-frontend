@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import JeVeuxButton from "@/components/Home/JeVeuxButton";
+import JeVeuxButton from "@/components/JeveuxBtn/JeVeuxButton";
 import mainPic from "../../public/images/mainPic.webp";
 import rightChat from "../../public/right-robot.png";
 import leftChat from "../../public/left-robot.png";

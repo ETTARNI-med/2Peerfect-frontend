@@ -16,7 +16,7 @@ const Chatbot: FunctionComponent<ChatbotProps> = ({ onClose }) => {
   const handleCloseChat = (): void => {
     setIsOpen(false);
     setIsPopupOpen(false);
-    // onClose();
+    onClose();
   };
 
   return isOpen ? (

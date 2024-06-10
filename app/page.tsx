@@ -1,6 +1,4 @@
 import React from "react";
-import Image from "next/image";
-import background from "../public/background.png";
 
 import DesignCard from "@/components/Home/DesignCard";
 import PresentielCard from "@/components/Home/PresentielCard";
@@ -13,6 +11,7 @@ import Partners from "@/components/Home/Partners";
 import CoursPopulaire from "@/components/Home/CoursPopulaire";
 import JeSuisUnCentre from "@/components/Home/JeSuisUnCentre";
 import Events from "@/components/Home/Events";
+import JcentreSectiion from "@/components/Home/JcentreSectiion";
 
 export default function Home() {
   return (
@@ -32,7 +31,9 @@ export default function Home() {
       </div>
       <Partners />
       <CoursPopulaire />
-      <JeSuisUnCentre />
+     <JcentreSectiion/>
+      
+
       <Events />
     </>
   );

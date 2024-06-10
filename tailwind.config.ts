@@ -1,13 +1,13 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      dropShadow: {
+        custom: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -31,20 +34,6 @@ const config = {
           foreground: "hsl(var(--primary-foreground))",
         },
 
-        'my-yellow': {
-          '50': '#fdffe4',
-          '100': '#f8ffc4',
-          '200': '#f1ff90',
-          '300': '#e2ff50',
-          '400': '#cfff11',
-          '500': '#b2e600',
-          '600': '#8ab800',
-          '700': '#688b00',
-          '800': '#526d07',
-          '900': '#455c0b',
-          '950': '#233400',
-      },
-      
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
@@ -84,7 +73,6 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -93,6 +81,6 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;
