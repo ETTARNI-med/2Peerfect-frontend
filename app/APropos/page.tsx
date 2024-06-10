@@ -6,19 +6,14 @@ import Image3 from "../../public/photo3.png";
 import Image4 from "../../public/image4.jpeg";
 import Image5 from "../../public/image5.jpeg";
 import Image6 from "../../public/image6.png";
-import Cards from "./cards"
-import Marquee from "./marquee"
-import Team from "./team"
-import Section5 from "./section5"
-
-
-
-
-
+import Cards from "./cards";
+import Marquee from "./marquee";
+import Team from "./team";
+import Section5 from "./section5";
 
 export default function page() {
   return (
-    <div className="bg-Apropo pt-12">
+    <div className="bg-Apropo pt-24">
       {/* first section */}
 
       <div className="flex gap-x-8  ">
@@ -105,34 +100,31 @@ export default function page() {
       <div className="flex flex-col mt-44">
         <div className="flex justify-center m-20">
           <h1 className="text-4xl text-blue-800 font-bold	">
-          Rencontrez notre équipe{" "}
+            Rencontrez notre équipe{" "}
           </h1>
         </div>
-       <Team></Team>
-        
+        <Team></Team>
       </div>
 
       {/* Fifth section  */}
       <div className="flex flex-col mt-44">
-        
         <Section5></Section5>
-        
       </div>
 
       {/* Sixth section  */}
       <div className="flex flex-col bg-white mt-44">
         <div className="flex justify-center m-20">
           <h1 className="text-4xl text-blue-800 font-bold	">
-          Pourquoi 2peerfect?
+            Pourquoi 2peerfect?
           </h1>
         </div>
-     <Cards></Cards>
+        <Cards></Cards>
       </div>
 
       {/* Seventh section  */}
 
       <div className="bg-white">
-       <Marquee></Marquee>
+        <Marquee></Marquee>
       </div>
     </div>
   );

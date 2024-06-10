@@ -17,8 +17,8 @@ function section1() {
           }}
           objectFit="cover"
         />
-        <div className="absolute z-50 inset-0 flex flex-col items-center justify-center">
-          <h1 className="font-bold shadow-md bg-white text-center uppercase mt-56 text-blue-800 text-5xl">
+        <div className="absolute z-40 inset-0  mt-80   flex flex-col items-center justify-center  ">
+          <h1 className="font-bold shadow-md bg-white text-center uppercase text-blue-800 text-5xl ">
             Pourquoi devenir un professeur avec
           </h1>
           <br />

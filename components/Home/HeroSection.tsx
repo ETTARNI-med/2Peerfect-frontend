@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import JeVeuxButton from "@/components/Home/JeVeuxButton";
-import mainPic from "../../public/mainPic.svg";
+import mainPic from "../../public/images/mainPic.webp";
 import rightChat from "../../public/right-robot.png";
 import leftChat from "../../public/left-robot.png";
 import TriggreChat from "./../chatbot/TriggreChat";
@@ -23,7 +23,6 @@ export default function Home() {
 
   // Modified toggleChatbot function to close the chatbot only when a button is clicked
   const toggleChatbot = () => {
- 
     setIsChatbotOpen(!isChatbotOpen); // Toggle chatbot visibility
   };
   return (
@@ -54,8 +53,8 @@ export default function Home() {
           <JeVeuxButton />
         </div>
         <div
-           onClick={() => setIsChatbotOpen(!isChatbotOpen)} // Toggle chatbot visibility when clicked
-           className="absolute bottom-0 left-0 p-2 cursor-pointer"
+          onClick={() => setIsChatbotOpen(!isChatbotOpen)} // Toggle chatbot visibility when clicked
+          className="absolute bottom-0 left-0 p-2 cursor-pointer"
         >
           {/* Left bottom icon */}
           <Image
@@ -68,20 +67,23 @@ export default function Home() {
             }}
           />
           {/* Render Chatbot*/}
-          {isChatbotOpen && <TriggreChat onClose={() => setIsChatbotOpen(false)} />} {/* Pass function to close the chatbot */}
+          {isChatbotOpen && (
+            <TriggreChat onClose={() => setIsChatbotOpen(false)} />
+          )}{" "}
+          {/* Pass function to close the chatbot */}
         </div>
 
         <div className="absolute bottom-0 right-0 p-2 cursor-pointer">
           {/* Right bottom icon */}
-            <Image
-              className=" z-30 "
-              src={rightChat}
-              alt="background"
-              style={{
-                width: "100%",
-                height: "auto",
-              }}
-            />
+          <Image
+            className=" z-30 "
+            src={rightChat}
+            alt="background"
+            style={{
+              width: "100%",
+              height: "auto",
+            }}
+          />
         </div>
         <div className="absolute right-1/3 -bottom-36 font-extrabold -z-10 w-[111px] h-[111px] rounded-full shadow border-8 border-black" />
 

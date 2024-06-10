@@ -19,7 +19,9 @@ function marquee() {
         <Image src={Mark4} alt="marquee" className="pt-12"></Image>
         <Image src={Mark5} alt="marquee" className="pt-12"></Image>
         <Image src={Mark6} alt="marquee" className="pt-12"></Image>
+        <Image src={Mark2} alt="marquee" className="pt-12 "></Image>
         <Image src={Mark7} alt="marquee" className="pt-12"></Image>
+        <Image src={Mark3} alt="marquee" className="pt-12"></Image>
       </Marquee>
     </div>
   );
