@@ -1,7 +1,7 @@
 import React from "react";
 import x from "../../public/x.png";
 import { FunctionComponent, useState } from "react";
-import ChatbotPopup3 from "./chatbotPopup3";
+import ChatbotPopup3 from "./ChatbotPopup3";
 interface ChatbotPopup2Props {
   onClose: () => void;
 }

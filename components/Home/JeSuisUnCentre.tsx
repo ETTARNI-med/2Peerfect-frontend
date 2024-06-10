@@ -1,14 +1,13 @@
 "use client";
-
 import { useState } from "react";
-
-import profcentre from "@/public/images/profCenter.png";
-import profgreen from "@/public/images/profgreen.png";
-
 import Image from "next/image";
 import Link from "next/link";
+import prof from "@/public/prof.png";
+import bgprof from "@/public/bggprof.webp";
+import BackgroundSVG from "../BackgroundSVG";
+import BackgroundSVGII from "../BackgroundSVGII";
 
-export default function JeSuisUnCentre() {
+function JeSuisUnCentre() {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -20,22 +19,52 @@ export default function JeSuisUnCentre() {
   };
 
   return (
-    <div className="relative -mt-8">
+    <>
       <div
-        className={`absolute top-96 left-96 w-[273.96px] h-[71.05px] bg-white rounded-[17px] shadow text-center pt-6 text-blue-800 text-xl font-bold hover:bg-lime-400`}
+        className="relative "
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <Link href="/JeSuisProf">JE SUIS UN PROFESSEUR</Link>
+        <div className="relative inline-block">
+          <div className="absolute inset-0 z-20 left-0 overflow-y-hidden ">
+            {isHovered ? <BackgroundSVGII /> : <BackgroundSVG />}
+          </div>
+          <div className="relative flex">
+            <div className="flex items-center ">
+              <Image
+                src={prof}
+                alt="prof"
+                className="relative z-30  w-[94%] "
+              />
+              <Link
+                href="/JeSuisProf"
+                className="bg-white rounded-[17px] shadow text-center p-6  mb-96  text-blue-800 text-xl font-bold hover:bg-lime-400 cursor-pointer z-50 -translate-x-[71px]"
+              >
+                PROFESSEUR
+              </Link>
+            </div>
+            <div className=" flex items-center ">
+              <Image
+                src={bgprof}
+                alt="bgprof"
+                className="w-full h-full  "
+                key="bgprof"
+              />
+              {isHovered && (
+                <div className="absolute inset-0 bg-black opacity-80"></div>
+              )}
+              <Link
+                href="/JeSuisCentre"
+                className=" bg-white rounded-[17px] shadow text-center mb-96 py-6 px-14 text-blue-800 text-xl font-bold hover:bg-lime-400 cursor-pointer z-50 -translate-x-[601px]"
+              >
+                CENTRE
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="relative top-96 left-2/3 w-[273.96px] h-[71.05px] bg-white rounded-[17px] shadow text-center pt-6 text-blue-800 text-xl font-bold hover:bg-lime-400">
-        <Link href="/JeSuisCentre">JE SUIS UN CENTRE</Link>
-      </div>
-      {isHovered ? (
-        <Image className="w-full " src={profgreen} alt="" priority />
-      ) : (
-        <Image className="w-full" src={profcentre} alt="" priority />
-      )}
-    </div>
+    </>
   );
 }
+
+export default JeSuisUnCentre;

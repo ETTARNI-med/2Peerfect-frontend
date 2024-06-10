@@ -1,5 +1,4 @@
-import React from "react";
-import ChatBot from "./Chatbot";
+import Chatbot from "./Chatbot";
 
 interface TriggreChatProps {
   onClose: () => void;
@@ -20,7 +19,7 @@ const TriggreChat: React.FC<TriggreChatProps> = ({ onClose }) => {
       />
       {/* Render Chatbot and prevent click events from bubbling up */}
       <div className="relative z-10" onClick={stopPropagation}>
-        <ChatBot />
+        {<Chatbot onClose={onClose} />}
       </div>
     </div>
   );

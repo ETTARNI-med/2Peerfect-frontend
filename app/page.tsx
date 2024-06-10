@@ -14,25 +14,15 @@ import Partners from '@/components/Home/Partners'
 import CoursPopulaire from '@/components/Home/CoursPopulaire'
 import JeSuisUnCentre from '@/components/Home/JeSuisUnCentre'
 import Events from '@/components/Home/Events'
-import SignIn from '@/components/register/SignIn'
-import SignUp from '@/components/register/SignUp'
+import Register from '@/components/Auth/Register'
 
 export default function Home() {
-    const [singIn, setSignIn] = useState<boolean>(false)
-    const [signUp, setSignUp] = useState<boolean>(false)
-
     return (
         <>
-            {singIn && (
-                <div className="w-full h-full fixed z-50 backdrop-blur-xl flex justify-center items-center">
-                    <SignIn />{' '}
-                </div>
-            )}
-            {signUp && (
-                <div className="w-full h-full fixed z-50 backdrop-blur-xl flex justify-center items-center">
-                    <SignUp />{' '}
-                </div>
-            )}
+            <div className="">
+                <Register />
+            </div>
+
             <div>
                 <HeroSection />
             </div>
