@@ -9,7 +9,7 @@ const Signup = () => {
             className=" h-12 w-20 bl rounded-[17px] shadow border-blue-800 border-4"
             onClick={() => setSignup(!signup)}
         >
-            <p className="text-lime-500 cursor-pointer underline underline-offset-2 font-semibold">
+            <p className="text-lime-500 cursor-pointer font-semibold">
                 Sign Up
             </p>
         </button>
