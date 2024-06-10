@@ -7,7 +7,7 @@ export default function JeSuisCentre() {
     <>
       <div className="flex flex-col">
         <div className="">
-          <Header></Header>
+          <Header />{" "}
         </div>
         <div className="">
           <Form></Form>

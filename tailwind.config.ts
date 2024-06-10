@@ -30,6 +30,21 @@ const config = {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
         },
+
+        'my-yellow': {
+          '50': '#fdffe4',
+          '100': '#f8ffc4',
+          '200': '#f1ff90',
+          '300': '#e2ff50',
+          '400': '#cfff11',
+          '500': '#b2e600',
+          '600': '#8ab800',
+          '700': '#688b00',
+          '800': '#526d07',
+          '900': '#455c0b',
+          '950': '#233400',
+      },
+      
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",

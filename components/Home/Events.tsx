@@ -1,5 +1,5 @@
 import React from "react";
-import eventImage from "@/public/eventImg.svg";
+import eventImage from "@/public/images/eventImg.png";
 import Image from "next/image";
 import { CalendarDays, MapPin } from "lucide-react";
 import Link from "next/link";
@@ -10,7 +10,7 @@ export default function Events() {
         Dernier événement
       </div>
       <div className=" flex justify-center mt-5">
-        {" "}
+        {/* <div className="border-2 bg-black  w-56 h-56 rounded-full"></div>{" "} */}
         <Image src={eventImage} alt="" width={230} height={230} priority />
       </div>
       <div className="flex justify-center space-x-10 mt-3">
@@ -29,7 +29,7 @@ export default function Events() {
       </div>
       <div className="flex justify-center">
         <div className="w-[132.54px] h-[35px] text-white bg-blue-800 rounded-[5px] font-semibold  flex items-center justify-center">
-        <Link href="/details"> plus de détails</Link>
+          <Link href="/details"> plus de détails</Link>
         </div>
       </div>
     </div>
@@ -40,7 +40,7 @@ export default function Events() {
         Prochaine événement
       </div>
       <div className=" flex justify-center mt-5">
-        {" "}
+        {/* <div className="border-2 bg-black  w-56 h-56 rounded-full"></div>{" "} */}
         <Image src={eventImage} alt="" width={230} height={230} priority />
       </div>
       <div className="flex justify-center space-x-10 mt-3">
@@ -59,7 +59,7 @@ export default function Events() {
       </div>
       <div className="flex justify-center">
         <div className="w-[132.54px] h-[35px] bg-blue-800 text-white rounded-[5px] font-semibold  flex items-center justify-center">
-        <Link href="/details"> plus de détails</Link>
+          <Link href="/details"> plus de détails</Link>
         </div>
       </div>
     </div>
@@ -71,6 +71,7 @@ export default function Events() {
       </div>
       <div className=" flex justify-center mt-5">
         {" "}
+        {/* <div className="border-2 bg-black  w-56 h-56 rounded-full"></div> */}
         <Image src={eventImage} alt="" width={230} height={230} priority />
       </div>
       <div className="flex justify-center space-x-10 mt-3">
@@ -89,7 +90,7 @@ export default function Events() {
       </div>
       <div className="flex justify-center">
         <div className="w-[132.54px] h-[35px] text-white  bg-blue-800 rounded-[5px] font-semibold  flex items-center justify-center">
-         <Link href="/details"> plus de détails</Link>
+          <Link href="/details"> plus de détails</Link>
         </div>
       </div>
     </div>
