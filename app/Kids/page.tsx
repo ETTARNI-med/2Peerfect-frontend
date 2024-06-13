@@ -1,6 +1,7 @@
 import Hero from './Hero'
 import Stats from './Stats'
 import StudentsProjects from './StudentsProjects'
+import Why2p from './Why2p'
 
 const Kids = () => {
     return (
@@ -8,6 +9,7 @@ const Kids = () => {
             <Hero />
             <StudentsProjects />
             <Stats />
+            <Why2p />
         </div>
     )
 }
