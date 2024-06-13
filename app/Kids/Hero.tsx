@@ -1,3 +1,4 @@
+import OurAmbassadors from './OurAmbassadors'
 import TechTools from './TechTools'
 
 const Hero = () => {
@@ -29,6 +30,9 @@ const Hero = () => {
             </div>
             <div className="w-full flex justify-center items-center pt-[7rem]">
                 <TechTools />
+            </div>
+            <div className="w-full pt-8">
+                <OurAmbassadors />
             </div>
         </div>
     )
